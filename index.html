@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación Completa de PrestaShop</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
+        .container { max-width: 1200px; margin: auto; padding: 20px; }
+        h1, h2, h3, h4 { color: #333; }
+        ul, ol { margin-left: 20px; }
+        .nav { background: #333; color: #fff; padding: 10px; text-align: center; }
+        .nav a { color: #fff; margin: 0 15px; text-decoration: none; }
+        .section { margin-top: 30px; }
+        footer { text-align: center; padding: 20px; background: #333; color: #fff; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header class="nav">
+        <h1>Documentación Completa de PrestaShop</h1>
+        <a href="#intro">Introducción</a> |
+        <a href="#db-interaction">Interacción de Base de Datos</a> |
+        <a href="#components">Componentes y Módulos</a> |
+        <a href="#content-admin">Administración de Contenido</a> |
+        <a href="#advanced-custom">Personalización Avanzada</a>  |
+        <a href="usuarios.html">Usuarios</a> |
+        <a href="docu_tablas.html">Tablas de Prestashop</a>
+    </header>
+
+    <div class="container">
+        <!-- Introducción -->
+        <section id="intro" class="section">
+            <h2>1. Introducción a PrestaShop</h2>
+            <p>PrestaShop es una plataforma de comercio electrónico de código abierto ideal para empresas que desean crear y gestionar tiendas en línea con flexibilidad.</p>
+            <p>PrestaShop ofrece características potentes como:</p>
+            <ul>
+                <li>Gestión completa de catálogo de productos, lo que incluye descripciones, precios, atributos y variantes.</li>
+                <li>Procesamiento de pagos seguro y confiable con múltiples opciones.</li>
+                <li>Herramientas avanzadas de marketing y SEO integradas.</li>
+                <li>Extensa personalización de temas y módulos para cubrir necesidades específicas de cada negocio.</li>
+            </ul>
+        </section>
+
+        <!-- Interacción de Base de Datos -->
+        <section id="db-interaction" class="section">
+            <h2>2. Interacción de la Base de Datos en PrestaShop</h2>
+            <p>La base de datos en PrestaShop es el núcleo donde se almacena toda la información de la tienda, desde productos hasta configuraciones de usuarios.</p>
+
+            <h3>2.1 Tablas Principales</h3>
+            <ul>
+                <li><strong>ps_product</strong>: Almacena detalles esenciales del producto, como precio, referencia y visibilidad en el catálogo.</li>
+                <li><strong>ps_product_lang</strong>: Guarda datos multilingües de cada producto, como nombres y descripciones.</li>
+                <li><strong>ps_customer</strong>: Contiene la información de los clientes registrados, como email, contraseñas encriptadas, direcciones, etc.</li>
+                <li><strong>ps_orders</strong>: Documenta los pedidos, incluyendo su estado, total y cliente asociado.</li>
+                <li><strong>ps_order_detail</strong>: Registra detalles de productos por cada pedido, permitiendo obtener el historial exacto de artículos comprados.</li>
+            </ul>
+
+            <h4>2.1.1 Tabla ps_product</h4>
+            <p><code>ps_product</code> es esencial para definir productos y gestionar inventarios. Almacena atributos como ID de categoría, precio, cantidad y referencias.</p>
+
+            <h4>2.1.2 Tabla ps_product_lang</h4>
+            <p>La tabla <code>ps_product_lang</code> proporciona traducción para productos en múltiples idiomas. Se actualiza cada vez que se añaden idiomas o se realizan cambios en las descripciones y títulos de productos.</p>
+
+            <h4>2.1.3 Tabla ps_customer</h4>
+            <p><code>ps_customer</code> permite identificar y administrar los usuarios registrados. Los datos en esta tabla incluyen contraseñas encriptadas y datos personales básicos.</p>
+
+            <h4>2.1.4 Tabla ps_orders</h4>
+            <p><code>ps_orders</code> contiene datos relevantes a cada pedido. Relacionada con la tabla <code>ps_order_detail</code> para obtener un desglose detallado de cada compra.</p>
+        </section>
+
+        <!-- Componentes y Módulos -->
+        <section id="components" class="section">
+            <h2>3. Componentes Principales y Módulos de PrestaShop</h2>
+            <p>PrestaShop utiliza módulos para añadir y mejorar funcionalidades.</p>
+
+            <h3>3.1 Módulos</h3>
+            <p>Los módulos son extensiones que amplían la funcionalidad base de PrestaShop.</p>
+            <ul>
+                <li><strong>Módulo de Pago</strong>: Facilita el proceso de transacciones, soportando distintos métodos de pago como PayPal, tarjetas, etc.</li>
+                <li><strong>Módulo de Envío</strong>: Calcula costos de envío, permitiendo opciones de personalización según transportista y zona geográfica.</li>
+                <li><strong>Módulo de SEO</strong>: Mejora la visibilidad en motores de búsqueda con herramientas como etiquetas y optimización automática de contenido.</li>
+                <li><strong>Módulo de Fidelización</strong>: Facilita la implementación de programas de fidelidad, con cupones y recompensas.</li>
+            </ul>
+
+            <h3>3.2 Plantillas y Sistema de Templating</h3>
+            <p>PrestaShop usa <strong>Smarty</strong> para gestionar sus plantillas, permitiendo modificar el diseño de la tienda a través de HTML, CSS y JavaScript.</p>
+        </section>
+
+        <!-- Administración de Contenido -->
+        <section id="content-admin" class="section">
+            <h2>4. Administración de Contenido</h2>
+            <p>La interfaz de PrestaShop permite gestionar productos, categorías y pedidos de forma sencilla.</p>
+
+            <h3>4.1 Gestión de Productos</h3>
+            <p>En el apartado de productos, el administrador puede gestionar información, imágenes, categorías y variaciones.</p>
+
+            <h4>4.1.1 Atributos de Productos</h4>
+            <p>Los atributos permiten crear productos en distintas variantes, como color y tamaño, cada uno gestionado de manera independiente.</p>
+
+            <h3>4.2 Gestión de Categorías</h3>
+            <p>Las categorías organizan los productos. PrestaShop permite jerarquizar categorías para facilitar la navegación.</p>
+
+            <h3>4.3 Gestión de Clientes</h3>
+            <p>El panel de clientes permite modificar datos de usuario y gestionar grupos y descuentos especiales, además del historial de compras.</p>
+
+            <h3>4.4 Gestión de Pedidos</h3>
+            <p>El módulo de pedidos permite gestionar estados de pedido, facturación y seguimiento detallado de compras.</p>
+        </section>
+
+        <!-- Personalización Avanzada -->
+        <section id="advanced-custom" class="section">
+            <h2>5. Personalización y Configuración Avanzada</h2>
+            <h3>5.1 Configuración de Preferencias Generales</h3>
+            <p>Permite definir moneda, idioma, tasas impositivas y seguridad global de la tienda.</p>
+
+            <h3>5.2 Plantillas Personalizadas</h3>
+            <p>Con las plantillas personalizadas y <strong>Smarty</strong>, es posible modificar el diseño, asegurando que la tienda se ajuste a la imagen de la marca.</p>
+
+            <h3>5.3 Desarrollar Módulos Personalizados</h3>
+            <p>Los desarrolladores pueden crear módulos personalizados para satisfacer necesidades específicas del negocio, empleando PHP y la API de PrestaShop.</p>
+
+            <h3>5.4 Configuración Avanzada del Servidor</h3>
+            <p>PrestaShop ofrece configuraciones avanzadas para mejorar el rendimiento del servidor y optimizar la indexación en motores de búsqueda.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>Copyright KytZiaN 2024</p>
+    </footer>
+</body>
+</html>
