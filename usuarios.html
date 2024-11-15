@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación de Usuarios en PrestaShop</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
+        .container { max-width: 1200px; margin: auto; padding: 20px; }
+        h1, h2, h3, h4 { color: #333; }
+        ul, ol { margin-left: 20px; }
+        .nav { background: #333; color: #fff; padding: 10px; text-align: center; }
+        .nav a { color: #fff; margin: 0 15px; text-decoration: none; }
+        .section { margin-top: 30px; }
+        footer { text-align: center; padding: 20px; background: #333; color: #fff; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header class="nav">
+        <h1>Documentación de Usuarios en PrestaShop</h1>
+        <a href="docu_tablas.html">Descripción de Tablas</a> |
+        <a href="#roles-usuarios">Roles de Usuarios</a> |
+        <a href="#gestion-clientes">Gestión de Clientes</a> |
+        <a href="#permisos">Permisos y Accesos</a> |
+        <a href="index.html">Volver a la Documentación Principal</a>
+    </header>
+
+    <div class="container">
+        <!-- Introducción -->
+        <section id="intro" class="section">
+            <h2>Introducción</h2>
+            <p>PrestaShop permite gestionar diversos tipos de usuarios, cada uno con diferentes niveles de acceso a las funcionalidades de la plataforma. La correcta gestión de usuarios es esencial para la seguridad y personalización de la tienda en línea.</p>
+        </section>
+
+        <!-- Roles de Usuarios -->
+        <section id="roles-usuarios" class="section">
+            <h2>1. Roles de Usuarios en PrestaShop</h2>
+            <p>Los usuarios de PrestaShop pueden tener diferentes roles que determinan sus permisos en la plataforma. Los roles principales incluyen:</p>
+
+            <h3>1.1 Administrador</h3>
+            <p>El <strong>Administrador</strong> tiene acceso completo a la plataforma, pudiendo gestionar productos, pedidos, configuraciones y otros usuarios.</p>
+
+            <h3>1.2 Vendedor</h3>
+            <p>El rol de <strong>Vendedor</strong> permite a los usuarios gestionar productos y pedidos, pero no acceder a configuraciones avanzadas ni administrar otros usuarios.</p>
+
+            <h3>1.3 Cliente</h3>
+            <p>El <strong>Cliente</strong> puede navegar por la tienda, realizar compras y gestionar su propia información y pedidos desde el área de cliente. No tiene acceso al panel de administración.</p>
+
+            <h3>1.4 Invitado</h3>
+            <p>Los <strong>Invitados</strong> pueden navegar en la tienda y añadir productos al carrito, pero no realizar una compra hasta registrarse como cliente.</p>
+        </section>
+
+        <!-- Gestión de Clientes -->
+        <section id="gestion-clientes" class="section">
+            <h2>2. Gestión de Clientes</h2>
+            <p>PrestaShop ofrece diversas herramientas para gestionar la base de datos de clientes. Esto incluye creación de cuentas, asignación de grupos y personalización de experiencias de compra.</p>
+
+            <h3>2.1 Creación de Cuenta</h3>
+            <p>Los clientes pueden registrarse directamente en la tienda, proporcionando datos como nombre, correo electrónico y contraseña. También se pueden registrar en el proceso de pago.</p>
+
+            <h3>2.2 Grupos de Clientes</h3>
+            <p>PrestaShop permite organizar clientes en <strong>grupos</strong>, como clientes mayoristas o minoristas, asignando descuentos y políticas específicas a cada grupo.</p>
+
+            <h3>2.3 Historial de Pedidos</h3>
+            <p>La plataforma registra todos los pedidos realizados por un cliente, permitiendo a los administradores acceder a su historial completo. Los clientes también pueden visualizar sus pedidos desde el área de cliente.</p>
+        </section>
+
+        <!-- Permisos y Accesos -->
+        <section id="permisos" class="section">
+            <h2>3. Permisos y Accesos en PrestaShop</h2>
+
+            <h3>3.1 Panel de Permisos</h3>
+            <p>El <strong>Panel de Permisos</strong> permite asignar niveles de acceso a cada rol, restringiendo funciones según la jerarquía del usuario. Esto garantiza que solo los usuarios autorizados puedan realizar tareas críticas.</p>
+
+            <h3>3.2 Configuración de Seguridad</h3>
+            <p>PrestaShop incluye opciones avanzadas para configurar <strong>medidas de seguridad</strong>, como autenticación de dos factores y gestión de contraseñas, asegurando un acceso seguro para los usuarios administrativos.</p>
+
+            <h3>3.3 Registro de Actividad</h3>
+            <p>La plataforma permite registrar la actividad de los usuarios en el panel de administración, incluyendo inicios de sesión y modificaciones realizadas, facilitando así la auditoría y control de cambios.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>Copyright KytZiaN 2024</p>
+    </footer>
+</body>
+</html>
